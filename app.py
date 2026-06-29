@@ -102,3 +102,46 @@ while True:
                     break
             else:
                 print("karvand was not found with this ID")
+
+    elif user == 4:
+        with open(pathh , "r") as file:
+            karvand = json.load(file)
+
+            user_id = input("ID: ")
+            for item in karvand.values():
+                if item["karvands"]["ID"] == user_id:
+                    
+                    item["karvands"]["email"] = input("email: ")
+                    item["karvands"]["city"] = input("city: ")
+                    item["karvands"]["education"]["degree"] = input("degree: ")
+                    item["karvands"]["education"]["field"] = input("field: ")
+                    
+                    print("Edited.")
+                    break
+            else:
+                print("karvand was not found with this ID")
+
+        with open(pathh, "w") as file:
+            json.dump(karvand, file, indent=4)
+
+    elif user == 5:
+        with open(pathh , 'r') as file:
+            karvand = json.load(file)
+
+            user_id = input("ID: ")
+            if user_id in karvand:
+                del karvand[user_id]
+
+                with open(pathh , 'w') as file:
+                    json.dump(karvand, file, indent=4)
+                print("karvand deleted.")
+                
+            else:
+                print("karvand not exist!")
+
+    elif user == 6:
+        print("The program has closed.")
+        break
+
+    else:
+        print("invalid number!")
