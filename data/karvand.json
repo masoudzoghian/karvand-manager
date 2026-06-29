@@ -1,0 +1,48 @@
+{
+    "1": {
+        "bootKamp": {
+            "title": "karvand python",
+            "year": "2026"
+        },
+        "karvands": {
+            "ID": "1",
+            "fullName": "masoudZoghian",
+            "email": "masoud@gmail.com",
+            "city": "tehran",
+            "education": {
+                "degree": "karshenasi",
+                "field": "business management"
+            },
+            "skill": [
+                {
+                    "name": "python",
+                    "level": "beginner",
+                    "score": 35
+                }
+            ]
+        }
+    },
+    "2": {
+        "bootKamp": {
+            "title": "karvand python",
+            "year": "2026"
+        },
+        "karvands": {
+            "ID": "2",
+            "fullName": "aliRezaei",
+            "email": "ali@gmail.com",
+            "city": "shiraz",
+            "education": {
+                "degree": "karshenasi",
+                "field": "math"
+            },
+            "skill": [
+                {
+                    "name": "python",
+                    "level": "beginner",
+                    "score": 40
+                }
+            ]
+        }
+    }
+}
