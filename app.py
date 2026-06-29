@@ -83,3 +83,22 @@ while True:
                     Education:{item["karvands"]["education"]}
                     Skill:{item["karvands"]["skill"]}
                 """)                  
+
+    elif user == 3:
+        with open(pathh , "r") as file:
+            karvand = json.load(file)
+
+            user_id = input("ID: ")
+            for item in karvand.values():
+                if item["karvands"]["ID"] == user_id:
+                    print(f"""
+                        ID:{item["karvands"]["ID"]}
+                        Name:{item["karvands"]["fullName"]}
+                        Email:{item["karvands"]["email"]}
+                        City:{item["karvands"]["city"]}
+                        Education:{item["karvands"]["education"]}
+                        Skill:{item["karvands"]["skill"]}
+                    """)
+                    break
+            else:
+                print("karvand was not found with this ID")
